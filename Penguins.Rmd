@@ -1,7 +1,7 @@
 ---
 title: "Penguin Graphs"
 author: "Michael Zargari"
-date: "`r Sys.Date()`"
+date: "`r format(Sys.time(), '%d-%B-%Y')`"
 output: html_document
 ---
 
