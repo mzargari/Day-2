@@ -1,0 +1,22 @@
+---
+title: "Penguin Graphs"
+author: "Michael Zargari"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+Scatterplot of body mass versus flipper length:
+
+```{r}
+ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) + geom_point(aes(color = species), size = 4)
+```
+
