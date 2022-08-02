@@ -14,6 +14,7 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
+Example A: $f(x) = x^2$
 ```{r}
 func <- expression(x^2)
 
@@ -23,6 +24,7 @@ x <- 3
 eval(funcc)
 ```
 
+Example B: $P(a) = 2(3a + 2)^4 - 5$
 ```{r}
 func <- expression(2 * (3*a + 2)^4 - 5)
 
@@ -32,8 +34,9 @@ a <- 1.2
 eval(funcc)
 ```
 
+Example C $-4t / (t^2 + 1)^3$
 ```{r}
-func <- expression(-4*t / (t*2 + 1)^3)
+func <- expression(-4*t / (t^2 + 1)^3)
 
 funcc <- D(func, "t")
 
