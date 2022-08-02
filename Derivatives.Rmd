@@ -23,15 +23,15 @@ x <- 2.8                          #This could even be a sequence of numbers whic
 eval(my_derivative)               #This tells my_derivative to run
 ```
 
-Find the slope of $g(z) = 2z^3 - 10.5z^2 + 4.1$  <!-- # this is in line LATEX -->
+Find the slope of $g(z) = 2z^3 - 10.5z^2 + 4.1$ <!-- # this is in line LATEX -->
 
 ```{r}
 gz <- expression(2 * z^3 - 10.5 * z^2 + 4.1)
 
-dg_dz <- D(gz, 'z')
+dg_dz <- D(gz, 'z')     # This is the same as deriv()
 dg_dz
 
-# Let's evaulate the slope over a range of values
+# Let's evaluate the slope over a range of values
 z <- seq(from = -3, to = 4, by = 0.5)
 
 eval(dg_dz)
