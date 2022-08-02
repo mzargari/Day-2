@@ -1,0 +1,39 @@
+---
+title: "Derivatives"
+author: "Michael Zargari"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Derivatives in R
+
+Find the derivative of $$f(x) = 5x^2$$
+
+```{r}
+ex_1 <- expression (5 * x ^ 2) #This coerces 5x^2 into an expression which deriv understabds
+
+my_derivative <- deriv(ex_1, "x") #this runs the derivative in terms of x
+my_derivative
+
+x <- 2.8                          #This could even be a sequence of numbers which it will compute it for each one
+eval(my_derivative)               #This tells my_derivative to run
+```
+
+Find the slope of $g(z) = 2z^3 - 10.5z^2 + 4.1$  <!-- # this is in line LATEX -->
+
+```{r}
+gz <- expression(2 * z^3 - 10.5 * z^2 + 4.1)
+
+dg_dz <- D(gz, 'z')
+dg_dz
+
+# Let's evaulate the slope over a range of values
+z <- seq(from = -3, to = 4, by = 0.5)
+
+eval(dg_dz)
+```
+
